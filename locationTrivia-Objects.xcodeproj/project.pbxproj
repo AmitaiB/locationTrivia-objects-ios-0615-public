@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3872019C1B27808B008D203E /* FISLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3872019B1B27808B008D203E /* FISLocation.m */; };
+		3872019F1B279087008D203E /* FISTrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3872019E1B279087008D203E /* FISTrivia.m */; };
 		A9E4F28886CA4BF98C947665 /* libPods-locationTrivia-ObjectsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0528C159F79489BA56C3983 /* libPods-locationTrivia-ObjectsTests.a */; };
 		BD76D87A1B0E0FDC00B2E56F /* FISTriviaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD76D8791B0E0FDC00B2E56F /* FISTriviaSpec.m */; };
 		D83BACF5192537C20032B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF4192537C20032B44E /* Foundation.framework */; };
@@ -39,6 +40,8 @@
 		0C554A7C1C3F13C4743D3650 /* Pods-locationTrivia-ObjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locationTrivia-ObjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-locationTrivia-ObjectsTests/Pods-locationTrivia-ObjectsTests.release.xcconfig"; sourceTree = "<group>"; };
 		3872019A1B27808B008D203E /* FISLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocation.h; sourceTree = "<group>"; };
 		3872019B1B27808B008D203E /* FISLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocation.m; sourceTree = "<group>"; };
+		3872019D1B279087008D203E /* FISTrivia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrivia.h; sourceTree = "<group>"; };
+		3872019E1B279087008D203E /* FISTrivia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrivia.m; sourceTree = "<group>"; };
 		BD76D8791B0E0FDC00B2E56F /* FISTriviaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTriviaSpec.m; sourceTree = "<group>"; };
 		C0528C159F79489BA56C3983 /* libPods-locationTrivia-ObjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-locationTrivia-ObjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C720E59B5F1A5428E67B02A3 /* Pods-locationTrivia-ObjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locationTrivia-ObjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-locationTrivia-ObjectsTests/Pods-locationTrivia-ObjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				D83BAD04192537C20032B44E /* FISAppDelegate.m */,
 				3872019A1B27808B008D203E /* FISLocation.h */,
 				3872019B1B27808B008D203E /* FISLocation.m */,
+				3872019D1B279087008D203E /* FISTrivia.h */,
+				3872019E1B279087008D203E /* FISTrivia.m */,
 				D83BAD06192537C20032B44E /* Images.xcassets */,
 				D83BACFB192537C20032B44E /* Supporting Files */,
 			);
@@ -305,6 +310,7 @@
 				D83BAD01192537C20032B44E /* main.m in Sources */,
 				D83BAD05192537C20032B44E /* FISAppDelegate.m in Sources */,
 				3872019C1B27808B008D203E /* FISLocation.m in Sources */,
+				3872019F1B279087008D203E /* FISTrivia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

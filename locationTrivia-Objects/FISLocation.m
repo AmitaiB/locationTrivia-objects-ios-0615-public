@@ -44,5 +44,17 @@
     return NO;
 }
 
+- (FISTrivia *)topTrivia {
+    NSInteger topLikes = 0;
+    NSMutableArray *triviaStorageBin = [NSMutableArray arrayWithCapacity:1];
+    
+    for (FISTrivia *trivium in self.myTrivia) {
+        if (trivium.likes > topLikes) {
+            triviaStorageBin[0] = trivium;
+            topLikes = trivium.likes;
+        }
+    }
+    return triviaStorageBin[0];
+}
 
 @end

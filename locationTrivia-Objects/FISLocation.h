@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FISTrivia.h"
 
 @interface FISLocation : NSObject
 
@@ -15,6 +16,7 @@
 @property (strong, nonatomic) NSString *latitude;
 @property (strong, nonatomic) NSString *longitude;
 @property (strong, nonatomic) NSDictionary *locationEntry;
+@property (strong, nonatomic) NSMutableArray *myTrivia;
 
 
 -(instancetype)initWithLocationName:(NSString *)name
@@ -26,6 +28,7 @@
 - (NSString *)shortenLocationNameWithLocation:(NSInteger)count;
 - (BOOL) verifyLocation;
 
+- (FISTrivia *)topTrivia;
 
 
 @end
