@@ -47,10 +47,10 @@
 
 - (NSDictionary *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
 {
-    for (NSDictionary *location in locations) {
-        NSString *locationName = location[@"name"];
+    for (FISLocation *location in locations) {
+        NSString *locationName = location.name;
         if ([locationName isEqualToString:name]) {
-            return location;
+            return location.name;
         }
     }
     return nil;
