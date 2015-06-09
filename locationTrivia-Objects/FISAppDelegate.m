@@ -7,6 +7,7 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISLocation.h"
 
 @implementation FISAppDelegate
 
@@ -26,17 +27,6 @@
     return YES;
 }
 
-
-
-- (NSString *)shortenLocationNameWithLocation:(NSDictionary *)location ToCount:(NSInteger)count
-{
-    NSString *name = location[@"name"];
-    if (count <0) {
-        return name;
-    }
-    return [name substringToIndex:count];
-}
-
 - (NSDictionary *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude
 {
     return @{@"name":name,
@@ -47,8 +37,8 @@
 -(NSArray *)getLocationNamesWithLocations:(NSArray *)locations
 {
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
-    for (NSDictionary *location in locations) {
-        NSString *name = location[@"name"];
+    for (FISLocation *location in locations) {
+        NSString *name = location.name;
         [resultArray addObject:name];
     }
 
