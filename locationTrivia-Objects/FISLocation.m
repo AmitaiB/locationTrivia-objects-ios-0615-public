@@ -36,5 +36,13 @@
     return [name substringToIndex:count];
 }
 
+- (BOOL) verifyLocation
+{
+    if (self.name && self.latitude && self.longitude) {
+        return YES;
+    }
+    return NO;
+}
+
 
 @end

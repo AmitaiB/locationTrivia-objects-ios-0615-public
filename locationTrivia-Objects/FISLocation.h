@@ -24,7 +24,7 @@
 -(instancetype)init;
 
 - (NSString *)shortenLocationNameWithLocation:(NSInteger)count;
-
+- (BOOL) verifyLocation;
 
 
 

@@ -45,18 +45,6 @@
     return resultArray;
 }
 
-- (BOOL) verifyLocation:(NSDictionary *)location
-{
-    if ([location.allKeys count] != 3)
-    {
-        return NO;
-    }
-    if (location[@"name"] && location[@"latitude"] && location[@"longitude"]) {
-        return YES;
-    }
-    return NO;
-}
-
 - (NSDictionary *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
 {
     for (NSDictionary *location in locations) {
