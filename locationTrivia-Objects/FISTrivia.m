@@ -24,4 +24,10 @@
     return self;
 }
 
+-(instancetype)init
+{
+    self = [self initWithContent:@""];
+    return self;
+}
+
 @end

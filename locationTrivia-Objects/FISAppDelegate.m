@@ -18,12 +18,15 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    NSDictionary *location =  @{@"name": @"Status of Liberty",
-                                @"longitude": @71.324,
-                                @"latitude": @-31.412};
-    NSLog(@"%@",[self shortenLocationNameWithLocation:location ToCount:3]);
+//    NSDictionary *location =  @{@"name": @"Status of Liberty",
+//                                @"longitude": @71.324,
+//                                @"latitude": @-31.412};
+//    NSLog(@"%@",[self shortenLocationNameWithLocation:location ToCount:3]);
+//
+//    NSLog(@"%@",[self createLocationWithName:@"Joe" Latitude:@32 Longitude:@43]);
 
-    NSLog(@"%@",[self createLocationWithName:@"Joe" Latitude:@32 Longitude:@43]);
+    FISLocation *location = [[FISLocation alloc] initWithLocationName:@"Status of Liberty" withLatitude:<#(NSString *)#> withLongitude:<#(NSString *)#>
+    
     return YES;
 }
 

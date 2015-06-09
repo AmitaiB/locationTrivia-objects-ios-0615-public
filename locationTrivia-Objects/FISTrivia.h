@@ -15,5 +15,6 @@
 
 -(instancetype)initWithContent:(NSString *)content andLikes:(NSInteger)likes;
 -(instancetype)initWithContent:(NSString *)content;
+-(instancetype)init;
 
 @end

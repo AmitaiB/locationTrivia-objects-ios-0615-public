@@ -13,15 +13,15 @@
 
 //@property (strong, nonatomic) NSDictionary *locationEntry;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *latitude;
-@property (strong, nonatomic) NSString *longitude;
+@property (strong, nonatomic) NSNumber *latitude;
+@property (strong, nonatomic) NSNumber *longitude;
 @property (strong, nonatomic) NSDictionary *locationEntry;
 @property (strong, nonatomic) NSMutableArray *myTrivia;
 
 
 -(instancetype)initWithLocationName:(NSString *)name
-                       withLatitude:(NSString *)latitude
-                      withLongitude:(NSString*)longitutde;
+                       withLatitude:(NSNumber *)latitude
+                      withLongitude:(NSNumber*)longitutde;
 
 -(instancetype)init;
 
