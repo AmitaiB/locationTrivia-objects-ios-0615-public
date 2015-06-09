@@ -10,7 +10,7 @@
 
 @implementation FISTrivia
 
--(instancetype)initWithContent:(NSString *)content andLikes:(NSInteger)likes {
+-(instancetype)initWithContent:(NSString *)content Likes:(NSInteger)likes {
     self = [super init];
     if (self) {
         _content = content;
@@ -20,7 +20,7 @@
 }
 
 -(instancetype)initWithContent:(NSString *)content {
-    self = [self initWithContent:content andLikes:0];
+    self = [self initWithContent:content Likes:0];
     return self;
 }
 

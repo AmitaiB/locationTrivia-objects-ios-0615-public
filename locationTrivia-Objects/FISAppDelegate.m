@@ -25,16 +25,17 @@
 //
 //    NSLog(@"%@",[self createLocationWithName:@"Joe" Latitude:@32 Longitude:@43]);
 
-    FISLocation *location = [[FISLocation alloc] initWithLocationName:@"Status of Liberty" withLatitude:<#(NSString *)#> withLongitude:<#(NSString *)#>
+    FISLocation *location = [[FISLocation alloc] initWithLocationName:@"Status of Liberty" withLatitude:@71.324 withLongitude:@-31.412];
     
     return YES;
 }
 
-- (NSDictionary *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude
+- (FISLocation *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude
 {
-    return @{@"name":name,
-             @"latitude":latitude,
-             @"longitude":longitude};
+    return [[FISLocation alloc] initWithLocationName:name withLatitude:latitude withLongitude:longitude];
+//    return @{@"name":name,
+//             @"latitude":latitude,
+//             @"longitude":longitude};
 }
 
 -(NSArray *)getLocationNamesWithLocations:(NSArray *)locations
@@ -48,12 +49,12 @@
     return resultArray;
 }
 
-- (NSDictionary *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
+- (FISLocation *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
 {
     for (FISLocation *location in locations) {
         NSString *locationName = location.name;
         if ([locationName isEqualToString:name]) {
-            return location.name;
+            return location;
         }
     }
     return nil;

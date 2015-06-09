@@ -90,7 +90,7 @@ describe(@"FISLocation", ^{
     });
 
     describe(@"Shorten Location Name", ^{
-        it(@"Should have a method called shortenLocationNameToLength:", ^{
+        it(@"Should have a method called shortenNameToLength:", ^{
             expect(location).to.respondTo(@selector(shortenedNameToLength:));
         });
         

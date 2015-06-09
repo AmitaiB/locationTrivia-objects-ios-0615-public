@@ -27,6 +27,7 @@
 
 - (NSString *)shortenLocationNameWithLocation:(NSInteger)count;
 - (BOOL) verifyLocation;
+- (NSString *)shortenedNameToLength:(NSInteger)newLength;
 
 - (FISTrivia *)topTrivia;
 

@@ -22,9 +22,10 @@
     return self;
 }
 
--(instancetype)init {
+-(instancetype)init
+{
     return [self initWithLocationName:@"Neverland" withLatitude:@0 withLongitude:@0];
-    }
+}
 
 
 - (NSString *)shortenLocationNameWithLocation:(NSInteger)count
@@ -44,7 +45,18 @@
     return NO;
 }
 
-- (FISTrivia *)topTrivia {
+- (NSString *)shortenedNameToLength:(NSInteger)newLength
+{
+    if (newLength < 0) {
+        return self.name;
+    } else {
+        return [self.name substringToIndex:newLength];
+    }
+}
+
+
+- (FISTrivia *)topTrivia
+{
     NSInteger topLikes = 0;
     NSMutableArray *triviaStorageBin = [NSMutableArray arrayWithCapacity:1];
     
