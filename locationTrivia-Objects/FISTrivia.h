@@ -13,4 +13,7 @@
 @property (strong, nonatomic) NSString *content;
 @property (nonatomic) NSInteger likes;
 
+-(instancetype)initWithContent:(NSString *)content andLikes:(NSInteger)likes;
+-(instancetype)initWithContent:(NSString *)content;
+
 @end

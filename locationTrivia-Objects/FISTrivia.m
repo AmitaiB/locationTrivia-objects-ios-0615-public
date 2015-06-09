@@ -10,4 +10,18 @@
 
 @implementation FISTrivia
 
+-(instancetype)initWithContent:(NSString *)content andLikes:(NSInteger)likes {
+    self = [super init];
+    if (self) {
+        _content = content;
+        _likes   = likes;
+    }
+    return self;
+}
+
+-(instancetype)initWithContent:(NSString *)content {
+    self = [self initWithContent:content andLikes:0];
+    return self;
+}
+
 @end
