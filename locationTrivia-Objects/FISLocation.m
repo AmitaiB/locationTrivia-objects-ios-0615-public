@@ -67,7 +67,7 @@
     if (newLength < 0) {
         return self.name;
     } else {
-        return [self.name substringToIndex:(newLength + 1)];
+        return [self.name substringToIndex:(newLength)];
     }
 }
 
