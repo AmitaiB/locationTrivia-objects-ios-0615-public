@@ -76,7 +76,7 @@ describe(@"FISLocation", ^{
             FISLocation *loc = [[FISLocation alloc] init];
             loc.name = @"Empire State Building";
             loc.latitude = @40.7484;
-            loc.longitude = @-1173.9857;
+            loc.longitude = @(-1173.9857);
             expect([loc verifyLocation]).to.beFalsy();
         });
 
@@ -84,7 +84,7 @@ describe(@"FISLocation", ^{
             FISLocation *loc = [[FISLocation alloc] init];
             loc.name = @"";
             loc.latitude = @40.7484;
-            loc.longitude = @-73.9857;
+            loc.longitude = @(-73.9857);
             expect([loc verifyLocation]).to.beFalsy();
         });
     });

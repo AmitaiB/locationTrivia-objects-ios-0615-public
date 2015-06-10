@@ -45,10 +45,10 @@
     BOOL isLongValid = NO;
     BOOL isNameValid = YES;
     
-    if ([self.latitude intValue] <= fabs(90.0)) {
+    if ([self.latitude floatValue] <= fabs(90.0)) {
         isLatValid  = YES;
     }
-    if ([self.longitude intValue] <= fabs(180.0)) {
+    if ([self.longitude floatValue] <= fabs(180.0)) {
         isLongValid  = YES;
     }
     if ([[self.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
@@ -58,8 +58,9 @@
     
     if (isLatValid && isLongValid && isNameValid) {
         return YES;
-    }
+    } else {
     return NO;
+    }
 }
 
 - (NSString *)shortenedNameToLength:(NSInteger)newLength {
