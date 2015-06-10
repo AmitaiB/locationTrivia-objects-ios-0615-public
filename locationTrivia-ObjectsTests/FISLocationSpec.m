@@ -21,6 +21,8 @@ describe(@"FISLocation", ^{
         location = [[FISLocation alloc] init];
     });
     
+    [location selfReport:@1];
+    
     describe(@"Properties", ^{
         it(@"Should have a name property", ^{
             expect(location).to.respondTo(@selector(name));
@@ -51,11 +53,13 @@ describe(@"FISLocation", ^{
 
     });
 
+    [location selfReport:@2];
+    
     describe(@"verifyLocation", ^{
         it(@"Should respond to the verifyLocation method", ^{
             expect(location).to.respondTo(@selector(verifyLocation));
         });
-
+        
         it(@"Should return YES for a valid location", ^{
             FISLocation *loc = [[FISLocation alloc] init];
             loc.name = @"Empire State Building";
@@ -71,7 +75,7 @@ describe(@"FISLocation", ^{
             loc.longitude = @-73.9857;
             expect([loc verifyLocation]).to.beFalsy();
         });
-
+        
         it(@"Should return NO for invalid longitude", ^{
             FISLocation *loc = [[FISLocation alloc] init];
             loc.name = @"Empire State Building";
@@ -89,6 +93,8 @@ describe(@"FISLocation", ^{
         });
     });
 
+    [location selfReport:@3];
+    
     describe(@"Shorten Location Name", ^{
         it(@"Should have a method called shortenNameToLength:", ^{
             expect(location).to.respondTo(@selector(shortenedNameToLength:));
@@ -108,6 +114,8 @@ describe(@"FISLocation", ^{
             expect(shortenedName).to.equal(location.name);
         });
     });
+    
+    [location selfReport:@4];
 
 });
 

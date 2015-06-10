@@ -20,9 +20,12 @@
 
 +(NSNumber *)absoluteValue:(NSNumber *)input;
 
+- (void)selfReport:(NSNumber *)reportNumber;
+
+
 -(instancetype)initWithLocationName:(NSString *)name
                        withLatitude:(NSNumber *)latitude
-                      withLongitude:(NSNumber*)longitutde;
+                      withLongitude:(NSNumber*)longitude;
 
 -(instancetype)init;
 

@@ -17,12 +17,12 @@
 
 -(instancetype)initWithLocationName:(NSString *)name
                        withLatitude:(NSNumber *)latitude
-                      withLongitude:(NSNumber*)longitutde {
+                      withLongitude:(NSNumber*)longitude {
     self = [super init];
     if (self) {
             _name = name;
         _latitude = latitude;
-        _longitude = longitutde;
+        _longitude = longitude;
     }
     return self;
 }
@@ -31,6 +31,11 @@
     return [self initWithLocationName:nil withLatitude:nil withLongitude:nil];
 }
 
+- (void)selfReport:(NSNumber *)reportNumber {
+    NSLog(@"\n\n\n***FISLocation object Self-Report #%@***\n\nself.name: %@\nself.latitude: %@\nself.longitude: %@\n[self verifyLocation]: ", reportNumber, self.name, self.latitude, self.longitude);
+    BOOL verifyVerify = [self verifyLocation];
+    NSLog(verifyVerify ? @"YES" : @"NO");
+}
 
 - (NSString *)shortenLocationNameWithLocation:(NSInteger)count {
     NSString *name = self.name;
@@ -64,9 +69,12 @@
 }
 
 - (NSString *)shortenedNameToLength:(NSInteger)newLength {
+    NSLog(@"\nBEFORE: newLength:\n%lul", (unsigned long)newLength);
     if (newLength < 0) {
+    NSLog(@"\nMIDDLE: self.name:\n%@", self.name);
         return self.name;
     } else {
+    NSLog(@"\nEND: [self.name substringToIndex:(newLength)] is:\n%@", [self.name substringToIndex:(newLength)]);
         return [self.name substringToIndex:(newLength)];
     }
 }
