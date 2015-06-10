@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISLocation.h"
 
 @interface FISAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (NSDictionary *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude;
+- (FISLocation *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude;
 - (NSArray *)getLocationNamesWithLocations:(NSArray *)locations;
-- (BOOL)verifyLocation:(NSDictionary *)location;
-- (NSDictionary *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations;
+- (BOOL)verifyLocation:(FISLocation *)location;
+- (FISLocation *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations;
 
 @end

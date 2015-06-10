@@ -42,8 +42,7 @@
 {
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     for (FISLocation *location in locations) {
-        NSString *name = location.name;
-        [resultArray addObject:name];
+        [resultArray addObject:location.name];
     }
 
     return resultArray;
@@ -52,8 +51,7 @@
 - (FISLocation *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
 {
     for (FISLocation *location in locations) {
-        NSString *locationName = location.name;
-        if ([locationName isEqualToString:name]) {
+        if ([location.name isEqualToString:name]) {
             return location;
         }
     }

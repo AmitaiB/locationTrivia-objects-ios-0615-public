@@ -10,6 +10,11 @@
 
 @implementation FISLocation
 
++(NSNumber *)absoluteValue:(NSNumber *)input {
+    return [NSNumber numberWithDouble:fabs([input doubleValue])];
+}
+
+
 -(instancetype)initWithLocationName:(NSString *)name
                        withLatitude:(NSNumber *)latitude
                       withLongitude:(NSNumber*)longitutde {
@@ -22,14 +27,12 @@
     return self;
 }
 
--(instancetype)init
-{
-    return [self initWithLocationName:@"Neverland" withLatitude:@0 withLongitude:@0];
+-(instancetype)init {
+    return [self initWithLocationName:nil withLatitude:nil withLongitude:nil];
 }
 
 
-- (NSString *)shortenLocationNameWithLocation:(NSInteger)count
-{
+- (NSString *)shortenLocationNameWithLocation:(NSInteger)count {
     NSString *name = self.name;
     if (count <0) {
         return name;
@@ -37,16 +40,29 @@
     return [name substringToIndex:count];
 }
 
-- (BOOL) verifyLocation
-{
-    if (self.name && self.latitude && self.longitude) {
+- (BOOL) verifyLocation {
+    BOOL isLatValid  = NO;
+    BOOL isLongValid = NO;
+    BOOL isNameValid = YES;
+    
+    if ([self.latitude intValue] <= fabs(90.0)) {
+        isLatValid  = YES;
+    }
+    if ([self.longitude intValue] <= fabs(180.0)) {
+        isLongValid  = YES;
+    }
+    if ([[self.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
+        isNameValid = NO;
+    }
+    
+    
+    if (isLatValid && isLongValid && isNameValid) {
         return YES;
     }
     return NO;
 }
 
-- (NSString *)shortenedNameToLength:(NSInteger)newLength
-{
+- (NSString *)shortenedNameToLength:(NSInteger)newLength {
     if (newLength < 0) {
         return self.name;
     } else {
@@ -55,8 +71,7 @@
 }
 
 
-- (FISTrivia *)topTrivia
-{
+- (FISTrivia *)topTrivia {
     NSInteger topLikes = 0;
     NSMutableArray *triviaStorageBin = [NSMutableArray arrayWithCapacity:1];
     

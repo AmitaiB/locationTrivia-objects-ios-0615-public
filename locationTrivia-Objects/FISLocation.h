@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSDictionary *locationEntry;
 @property (strong, nonatomic) NSMutableArray *myTrivia;
 
++(NSNumber *)absoluteValue:(NSNumber *)input;
 
 -(instancetype)initWithLocationName:(NSString *)name
                        withLatitude:(NSNumber *)latitude
